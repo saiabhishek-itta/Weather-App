@@ -5,6 +5,7 @@ function LocationData({setLocationData}:{setLocationData:Function}) {
   const fetchWeatherData = async() => {
     const geoApiResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=ed039290380d4519ad11988c00a055c7`);
     const geoLocationData = await geoApiResponse.json();
+    console.log(geoLocationData.length)
     if(geoLocationData.length !== 1){
         return;
     }
@@ -12,9 +13,9 @@ function LocationData({setLocationData}:{setLocationData:Function}) {
     let lon = geoLocationData[0].lon;
     let cityName = geoLocationData[0].name;
     let state = geoLocationData[0].state;
-
+    let country = geoLocationData[0].country;
     setLocationData({
-      lat,lon,cityName,state
+      lat,lon,cityName,state,country 
     })
   }
   return (
