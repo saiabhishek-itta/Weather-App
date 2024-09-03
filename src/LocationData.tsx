@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function LocationData({setLocationData}:{setLocationData:Function}) {
   const [city, setCity] = useState("");
   const fetchWeatherData = async() => {
-    const geoApiResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=ed039290380d4519ad11988c00a055c7`);
+    const geoApiResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=ed039290380d4519ad11988c00a055c7`);
     const geoLocationData = await geoApiResponse.json();
     console.log(geoLocationData.length)
     if(geoLocationData.length !== 1){

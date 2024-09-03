@@ -51,7 +51,7 @@ function DisplayWeatherData({
         return response.json();
       })
       .then((weatherData1: WeatherFeilds) => {
-        weatherData1.weather[0].icon = `http://openweathermap.org/img/wn/${weatherData1.weather[0].icon}@2x.png`;
+        weatherData1.weather[0].icon = `https://openweathermap.org/img/wn/${weatherData1.weather[0].icon}@2x.png`;
         let windSpeed = weatherData1.wind.speed * 3.6;
         let desc = " ";
         if (windSpeed == 0)
