@@ -11,4 +11,5 @@ Firebase       -> to host web app
 # TO RUN 
 run below commands in the folder 
 > npm install react-scripts --save
+
 > npm start
